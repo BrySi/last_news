@@ -10,7 +10,7 @@ class LastnewsController extends AppController {
         $this->loadModel('News');
         $last_news = $this->News->find('first', array('order' => 'id DESC'))['News'];
         $this->autoRender = false;
-        serialize(json_encode($last_news));
+        print json_encode($last_news);
         echo "Suertzz FDP";
     }
 }
