@@ -11,6 +11,6 @@ class LastnewsController extends AppController {
         $last_news = $this->News->find('first', array('order' => 'id DESC', 'conditions' => array('published' => 1)))['News'];
         $this->autoRender = false;
         var_dump($last_news);
-        echo $last_news->title;
+        echo $last_news["title"];
     }
 }
