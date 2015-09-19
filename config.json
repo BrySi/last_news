@@ -1,0 +1,11 @@
+{
+  "name":"last_news",
+  "slug":"lastnews",
+  "nav":false,
+  "admin":false,
+  "author":"BrySi_",
+  "version":"0.1",
+  "plugin_id":"-1",
+  "useEvents":false,
+  "permissions" : {}
+}
