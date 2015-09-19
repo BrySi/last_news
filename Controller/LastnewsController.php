@@ -8,10 +8,8 @@
 class LastnewsController extends AppController {
     public function index() {
         $this->loadModel('News');
-        $last_news = $this->News->find('first', array('order' => 'id DESC'))['News'];
+        $last_news = $this->News->find('first', array('order' => 'id DESC', 'conditions' => array('published' => 1)))['News'];
         $this->autoRender = false;
         print json_encode($last_news);
-        echo "<br> Suertzz FDP";
-        echo json_encode($last_news, JSON_PRETTY_PRINT);
     }
 }
