@@ -11,6 +11,7 @@ class LastnewsController extends AppController {
         $last_news = $this->News->find('first', array('order' => 'id DESC'))['News'];
         $this->autoRender = false;
         print json_encode($last_news);
-        echo "Suertzz FDP";
+        echo "<br> Suertzz FDP";
+        echo json_encode($last_news, JSON_PRETTY_PRINT);
     }
 }
