@@ -10,6 +10,6 @@ class LastnewsController extends AppController {
         $this->loadModel('News');
         $last_news = $this->News->find('first', array('order' => 'id DESC'))['News'];
         $this->autoRender = false;
-        echo debug(json_encode($last_news));
+        debug(json_encode($last_news));
     }
 }
