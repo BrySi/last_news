@@ -6,7 +6,7 @@
  * Time: 22:03
  */
 class LastnewsController extends AppController {
-    public function last_news() {
+    public function index() {
         $this->loadModel('News');
         $last_news = $this->News->find('first', array('order' => 'DESC id'))['News'];
     }
